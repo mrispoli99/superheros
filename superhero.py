@@ -6,7 +6,7 @@ import plotly.express as px
 # Set page config for a wider layout
 st.set_page_config(page_title="Superhero Showdown", layout="wide")
 
-st.title("🦸‍♂️ Superhero Showdown")
+st.title("🦸‍♂️ Mafoo's Superhero Showdown")
 st.write("Select up to 5 superheroes to compare their stats!")
 
 # --- Data Fetching ---
