@@ -5,7 +5,7 @@ import json
 # --- Page Config ---
 st.set_page_config(page_title="Mafoo's Superhero Showdown", layout="centered")
 
-st.title("🏆 Superhero Showdown: Ranked Edition")
+st.title("🏆 Mafoo's Superhero Showdown: Ranked Edition")
 st.write("Type in any 5 characters. The tool will rank them from most to least powerful and explain why!")
 
 # --- API Configuration ---
