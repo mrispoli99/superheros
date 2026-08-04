@@ -6,8 +6,8 @@ import json
 
 # --- Page Config ---
 st.set_page_config(page_title="Superhero Showdown AI", layout="wide")
-st.title("🦸‍♂️ Superhero Showdown: AI Edition")
-st.write("Type in any 5 characters (even fuzzy descriptions!) and Gemini will evaluate them based on comic lore.")
+st.title("🦸‍♂️ Mafoo's Superhero Showdown")
+st.write("Type in any 5 characters separated by a comma (even fuzzy descriptions!) and AI will evaluate them based on comic lore.")
 
 # --- API Configuration ---
 # Streamlit automatically looks in its secrets manager for this key
@@ -18,12 +18,12 @@ except KeyError:
     st.stop()
 
 # --- Defined Weights ---
-weight_int = 0.10
-weight_str = 0.30
+weight_int = 0.15
+weight_str = 0.20
 weight_spd = 0.10
 weight_dur = 0.10
-weight_pow = 0.30
-weight_com = 0.10
+weight_pow = 0.40
+weight_com = 0.05
 
 # --- User Interface ---
 user_query = st.text_input(
@@ -60,9 +60,9 @@ if st.button("Evaluate Multiverse Matchup"):
             """
             
             try:
-                # Initialize Gemini 2.5 Flash with JSON mode enforced
+                # Initialize Gemini 3.6 Flash with JSON mode enforced
                 model = genai.GenerativeModel(
-                    "gemini-2.5-flash",
+                    "gemini-3.6-flash",
                     system_instruction=system_prompt,
                     generation_config={"response_mime_type": "application/json"}
                 )
